@@ -68,7 +68,7 @@ const Dashboard = ({ launches, allLaunches, setLaunches, setAllLaunches}) => {
       {
         launches ? 
           (launches.map((launch) => (
-          <div key={launch.flight_number} style={{ marginBottom: '60px', marginRight: '50px',width:"250px"}}>
+          <div key={launch.idx} style={{ marginBottom: '60px', marginRight: '50px',width:"250px"}}>
             <img src={launch.links.mission_patch_small} alt={launch.mission_name} style={{ height: '220px' }} />
             <p style={{ fontSize: '20px' }}>Launch Date: {new Date(launch.launch_date_utc).toLocaleDateString()}</p>
             <p style={{ fontSize: '30px', fontWeight: 'bold' }}>{launch.mission_name}</p>
